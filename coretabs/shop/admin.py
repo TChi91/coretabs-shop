@@ -18,6 +18,7 @@ def discount(modeladmin, request, queryset):
 discount.short_description='Apply 20%% DISCOUNT'
 '''
 
+
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     date_hierarchy = 'created_at'
@@ -32,7 +33,6 @@ class ProductAdmin(admin.ModelAdmin):
             product.price = product.price * decimal.Decimal('0.8')
             product.save()
     discount.short_description = 'Apply 20%% DISCOUNT'
-
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):

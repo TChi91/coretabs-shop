@@ -19,8 +19,7 @@ from . import views
 
 urlpatterns = [
     path('shop/', include('shop.urls')),
-    path('ebay/', include('shop.urls')),
-    path('', views.index),
+    path('', include('shop.urls')),
     path('hello/<name>', views.hello),
     path('admin/', admin.site.urls),
 ]

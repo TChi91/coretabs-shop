@@ -1,0 +1,18 @@
+{% extends "shop/base.html" %}
+
+{% block title %}
+    {{ product.name }}
+{% endblock %}
+
+{% block content %}
+<div id="header">
+<h3>{{ product.name }}</h3>
+<h5> Category : {{ product.category }}</h5>
+<h5> Created at: {{ product.created_at }} </h5>
+<h5> Price :{{ product.price }}</h5>
+<h5> Quantite :{{ product.stock }}</h5>
+<h5> Description :{{ product.description }}</h5>
+</div>
+
+
+{% endblock %}
